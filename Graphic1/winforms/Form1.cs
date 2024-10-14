@@ -12,7 +12,7 @@ namespace Graphic1
         {
             InitializeComponent();
             var graph = CreateGraphics();
-            figure = new Mouse(new Converter(400, 400), new PainterProect(graph), new Mover2d());
+            figure = new Mouse(new Converter(400, 400), new PainterZ(graph), new Mover2d());
             this.Size = new System.Drawing.Size(1408, 683);
         }
 

@@ -266,7 +266,7 @@ public static class TriangleRasterizer
         Vector3 lightPos = new Vector3(100.0f, 100.0f, 100.0f); // Позиция источника света
         Vector3 viewPos = new Vector3(1, 0, 0); // Позиция наблюдателя (камеры)
         Vector3 vertexPos = new Vector3(x, y, z); // Позиция вершины полигона
-        Vector3 ambientColor = new Vector3(0.1f, 10.1f, 0.1f); // Цвет фонового освещения
+        Vector3 ambientColor = new Vector3(0.2f, 0.2f, 0.2f); // Цвет фонового освещения
         Vector3 lightColor = new Vector3(10.0f, 10.0f, 10.0f); // Цвет света
 
         float k_a = 8.2f;    //  фоновое освещение
