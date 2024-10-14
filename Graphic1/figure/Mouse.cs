@@ -25,20 +25,20 @@ namespace Graphic1
         { 1.0, 2.0, 0, 1.0 },   // 13
         { -1.0, 2.0, 0, 1.0 },  // 14
         //X2
-        { -4.0, -2.0, 2, 1.0 }, // 1
-        { -3.0, -2.0, 2, 1.0 }, // 2
-        { 1.0, -2.0, 2, 1.0 },  // 3
-        { 1.0, 0.0, 2, 1.0 },   // 4
-        { -3.0, 0.0, 2, 1.0 },  // 5
-        { -1.0, 0.0, 2, 1.0 },  // 6
-        { -1.0, 4.0, 2, 1.0 },  // 7
-        { -3.0, 4.0, 2, 1.0 },  // 8
-        { -3.0, 2.0, 2, 1.0 },  // 9
-        { 3.0, 2.0, 2, 1.0 },   // 10
-        { 3.0, 4.0, 2, 1.0 },   // 11
-        { 1.0, 4.0, 2, 1.0 },   // 12
-        { 1.0, 2.0, 2, 1.0 },   // 13
-        { -1.0, 2.0, 2, 1.0 },  // 14
+        { -4.0, -2.0, 2, 1.0 }, // 15
+        { -3.0, -2.0, 2, 1.0 }, // 16
+        { 1.0, -2.0, 2, 1.0 },  // 17
+        { 1.0, 0.0, 2, 1.0 },   // 18
+        { -3.0, 0.0, 2, 1.0 },  // 19
+        { -1.0, 0.0, 2, 1.0 },  // 20
+        { -1.0, 4.0, 2, 1.0 },  // 21
+        { -3.0, 4.0, 2, 1.0 },  // 22
+        { -3.0, 2.0, 2, 1.0 },  // 23
+        { 3.0, 2.0, 2, 1.0 },   // 24
+        { 3.0, 4.0, 2, 1.0 },   // 25
+        { 1.0, 4.0, 2, 1.0 },   // 26
+        { 1.0, 2.0, 2, 1.0 },   // 27
+        { -1.0, 2.0, 2, 1.0 },  // 28
         //YXO L
         { -1.5, 2.5, 0, 1.0 }, //15
         { -2.5, 2.5, 0,1.0 }, //16
@@ -62,14 +62,14 @@ namespace Graphic1
         //Rot
         { -0.5, 0.25, 0, 1.0 },  // Точка 31
         {  0.5, 0.25, 0, 1.0 },  // Точка 32
-        {  0.5, 0.5, 0, 1.0 },   //  32
-        { -0.5, 0.5, 0, 1.0 }    //  31
+        {  0.5, 0.5, 0, 1.0 },   //  33
+        { -0.5, 0.5, 0, 1.0 }    //  34
 
          
     };
 
         protected override int[,] matrix { get; } = {
-        //             1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+        //             1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
             /* 1  */ { 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             /* 2  */ { 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             /* 3  */ { 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -135,85 +135,99 @@ namespace Graphic1
 
     };
 
-        protected override Poligon[] poligons { get; } = new Poligon[]  
+        protected override Poligon[] poligons { get; } = new Poligon[]
         {
-           //Лицевая сторона
-           new Poligon(9, 4, 6, Color.Green),
-           new Poligon(5, 7, 8, Color.Green),
-           new Poligon(6, 7, 5, Color.Green),
-           new Poligon(6, 4, 5, Color.Green),
+            
+            //хвост?
+            new Poligon(0, 1, 2, Color.Black),
+            new Poligon(14, 15, 14, Color.Black),
+            // лицевая сторона
+            //+
+            // перед тело
+            new Poligon(1, 3, 2, Color.Gray),
+            new Poligon(1, 3, 4, Color.Gray),
+            //перед голова
+            new Poligon(5, 12, 3, Color.Gray),
+            new Poligon(5, 12, 13, Color.Gray),
+            //перед л ухо
+            new Poligon(13, 7, 8, Color.Gray),
+            new Poligon(13, 7, 6, Color.Gray),
+            //перед п ухо
+            new Poligon(12, 10, 11, Color.Gray),
+            new Poligon(12, 10, 9, Color.Gray),
+            
+            //+
+            // зад тело+14
+            new Poligon(15, 17, 16, Color.Gray),
+            new Poligon(15, 17, 18, Color.Gray),
+            //зад голова
+            new Poligon(19, 26, 17, Color.Gray),
+            new Poligon(19, 26, 27, Color.Gray),
+            //зад л ухо
+            new Poligon(27, 21, 22, Color.Gray),
+            new Poligon(27, 21, 20, Color.Gray),
+            //зад п ухо
+            new Poligon(26, 24, 25, Color.Gray),
+            new Poligon(26, 24, 23, Color.Gray),
 
-           new Poligon(1, 2, 0, Color.GreenYellow),
-           new Poligon(0, 2, 3, Color.GreenYellow),
+            //низ+
+            //вид снизу
+            new Poligon(1, 16, 2, Color.Gray),
+            new Poligon(1, 16, 15, Color.Gray),
 
-           new Poligon(18, 19, 17, Color.Brown),
-           new Poligon(16, 19, 17, Color.Brown),
+            //низ л ухо
+            new Poligon(8, 27, 13, Color.Gray),
+            new Poligon(8, 27, 22, Color.Gray),
+            //низ п ухо
+            new Poligon(12, 23, 26, Color.Gray),
+            new Poligon(12, 23, 9, Color.Gray),
+            
+            //сверху++
+            //тело
+            new Poligon(4, 17, 3, Color.Gray),
+            new Poligon(4, 17, 18, Color.Gray),
+            //голова
+            new Poligon(13, 26, 12, Color.Gray),
+            new Poligon(13, 26, 27, Color.Gray),
+            //ухо л
+            new Poligon(7, 20, 6, Color.Gray),
+            new Poligon(7, 20, 21, Color.Gray),
+            //ухо п
+            new Poligon(11, 24, 10, Color.Gray),
+            new Poligon(11, 24, 25, Color.Gray),
 
-           new Poligon(10, 13, 14, Color.GreenYellow),
-           new Poligon(13, 14, 15, Color.GreenYellow),
+            //справа+
+            //тело
+            new Poligon(2, 26, 16, Color.Gray),
+            new Poligon(2, 26, 12, Color.Gray),
 
+            //ухо п
+            new Poligon(10, 23, 24, Color.Gray),
+            new Poligon(10, 23, 9, Color.Gray),
 
-            // Зад
-            new Poligon(29, 24, 26, Color.Green),
-            new Poligon(25, 27, 28, Color.Green),
-            new Poligon(26, 27, 25, Color.Green),
-            new Poligon(26, 24, 25, Color.Green),
+            //ухо л
+            new Poligon(6, 27, 13, Color.Gray),
+            new Poligon(6, 27, 20, Color.Gray),
 
-            new Poligon(21, 22, 20, Color.GreenYellow),
-            new Poligon(20, 22, 23, Color.GreenYellow),
+            //слева+
+            //тело
+            new Poligon(1, 18, 4, Color.Gray),
+            new Poligon(1, 18, 15, Color.Gray),
 
-            new Poligon(38, 39, 37, Color.Brown),
-            new Poligon(36, 39, 37, Color.Brown),
+            //голова
+            new Poligon(5, 27, 13, Color.Gray),
+            new Poligon(5, 27, 19, Color.Gray),
 
-            new Poligon(30, 33, 34, Color.GreenYellow),
-            new Poligon(33, 34, 35, Color.GreenYellow),
+            //ухо л
+            new Poligon(7, 22, 21, Color.Gray),
+            new Poligon(7, 22, 8, Color.Gray),
 
-            //Bottom
+            //ухо п
+            new Poligon(11, 26, 12, Color.Gray),
+            new Poligon(11, 26, 25, Color.Gray),
 
-              new Poligon(6, 7, 27, Color.White),
-              new Poligon(6, 27, 26, Color.White),
-
-              new Poligon(6, 9, 26, Color.Green),
-              new Poligon(29, 9, 26, Color.Green),
-
-              new Poligon(7, 8, 28, Color.Green),
-              new Poligon(7, 28, 27, Color.Green),
-
-              new Poligon(13, 15, 35, Color.Green),
-              new Poligon(13, 33, 35, Color.Green),
-
-              //Top
-
-              new Poligon(8, 9, 28, Color.GreenYellow),
-              new Poligon(29, 28, 9, Color.GreenYellow),
-
-              new Poligon(1, 2, 22, Color.Green),
-              new Poligon(22, 21, 1, Color.Green),
-
-              new Poligon(10, 14, 34, Color.GreenYellow),
-              new Poligon(10, 20, 34, Color.GreenYellow),
-
-              new Poligon(18, 17, 37, Color.Brown),
-              new Poligon(18, 38, 37, Color.Brown),
-
-              // Front
-
-              new Poligon(14, 15, 34, Color.Green),
-              new Poligon(34, 35, 15, Color.Green),
-
-              new Poligon(2, 3, 23, Color.Green),
-              new Poligon(23, 22, 2, Color.Green),
-
-              new Poligon(17, 16, 36, Color.Brown),
-              new Poligon(36, 37, 17, Color.Green),
-
-               new Poligon(18, 19, 39, Color.Green),
-              new Poligon(39, 38, 18, Color.Green),
-
-              new Poligon(1, 0, 20, Color.Green),
-              new Poligon(20, 21, 1, Color.Green),
         };
-    
+
         public Mouse(Converter _convert, Painter _painter, Mover _mover) : base(_convert, _painter, _mover) { }
     }
 }
